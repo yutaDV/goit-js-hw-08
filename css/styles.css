@@ -1,5 +1,7 @@
 .container{
     padding: 24px;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 .gallery {
@@ -10,12 +12,11 @@
     padding: 0;
     margin-bottom: 100px;
     margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 100px;
+    justify-content: center;
 }
 
 .gallery-image {
-    flex: 1 1 calc(33.333% - 48px);
     box-sizing: border-box;
     width: 360px;
     height: 200px;
