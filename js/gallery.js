@@ -86,4 +86,19 @@ function imagesTemplate(arr) {
 
 const markup = imagesTemplate(images);
 
+
+
+
+
 refs.itemList.innerHTML = markup;
+
+refs.itemList.addEventListener('click', e => {
+  e.preventDefault();
+  const clickedImage = e.target;
+  if (clickedImage.classList.contains('gallery-image')) {
+    const largeImageURL = clickedImage.dataset.source;
+    basicLightbox.create(`
+      <img src="${largeImageURL}" alt="${clickedImage.alt}">
+    `).show();
+  }
+});
